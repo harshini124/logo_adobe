@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff0f5; /* Soft pink background */
+    color: #4a2040;
+}
+
+/* Navigation Bar Styles */
+.nav-bar-color {
+    background-color: #e8b0b0; /* Darker baby pink */
+    box-shadow: 0 4px 12px rgba(232, 176, 176, 0.3);
+}
+
+.navbar {
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+}
+
+.navbar-brand:hover {
+    color: #fde4f2;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 8px 20px !important;
+    margin: 0 5px;
+}
+
+.nav-link:hover, .nav-highlight {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #4a2040 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Remove heart from nav-highlight */
+.nav-highlight::after {
+    content: '';
+    margin-left: 0;
+}
+
+/* Main Content Styles */
+.container-lg {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(236, 103, 197, 0.15);
+    background-color: #fef2f9;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(236, 103, 197, 0.25);
+}
+
+.card-img-top {
+    padding: 30px;
+    height: 300px;
+    object-fit: contain;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    background-color: #fef8fd;
+}
+
+.card-body {
+    background-color: #fef2f9;
+    padding: 25px;
+}
+
+.card-body hr {
+    height: 2px;
+    background: linear-gradient(90deg, #FF9BFF 0%, #EC67C5 100%);
+    opacity: 1;
+    border: none;
+    margin: 15px 0;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #9c2b80;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Headers */
+h1 {
+    font-weight: 800;
+    color: #9c2b80;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FF9BFF 0%, #EC67C5 100%);
+    border-radius: 2px;
+}
+
+h3 {
+    font-weight: 600;
+    color: #9c2b80;
+}
+
+/* Favicon Section */
+.favicon-section {
+    background-color: #fef2f9;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(236, 103, 197, 0.15);
+    transition: all 0.4s ease;
+}
+
+.favicon-section:hover {
+    box-shadow: 0 15px 35px rgba(236, 103, 197, 0.25);
+}
+
+.favicon-section img {
+    filter: drop-shadow(0 5px 15px rgba(236, 103, 197, 0.2));
+    transition: transform 0.4s ease;
+}
+
+.favicon-section:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Footer */
+.footer-bm {
+    background-color: #e8b0b0; /* Updated to match navbar */
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 20px 0 !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -4px 12px rgba(232, 176, 176, 0.2);
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .favicon-section, h1 {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 30px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Additional girly style elements */
+::selection {
+    background-color: rgba(236, 103, 197, 0.3);
+    color: #9c2b80;
+}
